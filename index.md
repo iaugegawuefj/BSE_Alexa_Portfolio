@@ -64,6 +64,8 @@ Generally, the electricity from the battery goes through the resistor. From ther
 
 The main challenge I had with this project was my inexperience with soldering. I kept on forgetting to heat the metal itself, not just the solder, which made the solder not stick to the surfaces it needed to and prevented the flow of electricity throughout the project. In order to remedy this problem, I now pay close attention to how hot the materials I work with are when I solder.
 
+![Headstone Image](IMG_1925.jpg){: height="30%" width="30%"}
+![Headstone Image](IMG_1927.jpg){: height="30%" width="30%"}
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
