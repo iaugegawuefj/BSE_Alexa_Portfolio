@@ -14,7 +14,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
-![headshot](alexa_headshot.png)
+![headshot](alexa_headshot.png){:height="50%" width="50%"}
   
 # Final Milestone
 
@@ -64,7 +64,7 @@ Generally, the electricity from the battery goes through the resistor. From ther
 
 The main challenge I had with this project was my inexperience with soldering. I kept on forgetting to heat the metal itself, not just the solder, which made the solder not stick to the surfaces it needed to and prevented the flow of electricity throughout the project. In order to remedy this problem, I now pay close attention to how hot the materials I work with are when I solder.
 
-![Headstone Image](cat1.png){:height="30%" width="20%"}
+![Headstone Image](cat1.png){:height="30%" width="30%"}
 ![Headstone Image](cat2.png){:height="30%" width="30%"}
 
 # Schematics 
