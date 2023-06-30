@@ -1,7 +1,4 @@
 # Ultrasonic Eyes
-```HTML –>
-coming soon :)
-```
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
