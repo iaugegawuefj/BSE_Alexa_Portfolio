@@ -1,6 +1,6 @@
 # Ultrasonic Eyes
 ```HTML ->
-DOES THIS OWRK
+welcome to funnyland
 ```
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
@@ -35,18 +35,23 @@ For your second milestone, explain what you've worked on since your previous mil
 - What has been surprising about the project so far
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
+-->
 
 # First Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l_X90jvYo3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+My project is the Ultrasonic Eyes, which track movement based on ultrasonic sensors and display eyes that follow said movement. The components include two LED matrices, two ultrasonic sensors, and an Arduino Nano.
 
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project -->
+The LED matrices are a form of dot-matrix display, with their cathodes joined in rows and anodes in columns. By sending signals to a specific row and column, you can light up individual LEDS. Here, I used this function to light up the pattern for the eyes. Later, by using different “sprites”, I hope that it’ll give the illusion of looking where movement is.
+
+The ultrasonic sensors, as their name suggests, utilize ultrasonic waves to calculate distance much like sonar. By sending out these waves and then measuring the time between when they’re sent out (trigger) and bounced back (echo), you can figure out the distance between the sensor and objects in front of it. Here, they’re used to figure out what’s moving - if one of the ultrasonic sensors has a distance value that is more than 0 (and greater than the other’s value), then something’s moving more in front of that sensor and the eyes should look in that direction.
+
+The Arduino Nano controls everything with the code I upload to it from my computer, and provides power to the LED matrices so they can turn on. There’s really nothing else about it.
+
+Speaking of technical progress, I managed to make the ultrasonic sensors measure distance. I also connected the LED matrices together, had them both display the same thing, and scrolled text across them. I mainly had hardware issues, as the LED matrices have some connection problems that cause each one to turn off sporadically. I don’t know why that is, but it could be because of my soldering. One challenge that I did manage to fix was the flickering of the LEDs, as the blueprint I’m following wrote that they required 3.3 volts when they needed 5. I only managed to realize this after looking up the LED matrix model on Amazon.
+
+To complete the project, I need to have the eyes react to movement (basically get the project to work). Then, I need to solder my components onto an actual board, mount it inside the 3d-printed box, put it on a chassis to attach wheels to it, and give it the ability to back away from obstacles in its path. Simple, really.
 
 # Starter Project
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nXF9PFrXywM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
