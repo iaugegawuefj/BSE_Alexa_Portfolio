@@ -66,22 +66,234 @@ The main challenge I had with this project was my inexperience with soldering. I
 ![Headstone Image](cat1.png){:height="30%" width="30%"}
 ![Headstone Image](cat2.png){:height="30%" width="30%"}
 
-<!--- # Schematics 
+# Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+#include <SPI.h>
+#include <Adafruit_GFX.h>
+#include <Max72xxPanel.h>
+
+int pinCS = 10;
+
+int numberOfHorizontalDisplays = 1;
+int numberOfVerticalDisplays = 1;
+
+const int trigPin = 2;
+const int echoPin = 3;
+const int trigPin2 = 4;
+const int echoPin2 = 5;
+// defines variables
+long duration;
+long duration2;
+int distance1;
+int distance2;
+int dist1;
+int dist2;
+
+Max72xxPanel matrix = Max72xxPanel(pinCS, numberOfHorizontalDisplays, numberOfVerticalDisplays);
+
+// // We are using hardware SPI which automatically 
+// MD_MAX72XX mx = MD_MAX72XX(CS_PIN, MAX_DEVICES); // Initialise the 2 Matrix displays
+
+const unsigned char PROGMEM eyeforward[] = {
+  B00111100,
+  B01000010,
+  B10011001,
+  B10101101,
+  B10111101,
+  B10011001,
+  B01000010,
+  B00111100
+};
+
+const unsigned char PROGMEM eyeright[] = {
+  B00111100,
+  B01000010,
+  B11110001,
+  B11011001,
+  B11111001,
+  B11110001,
+  B01000010,
+  B00111100
+};
+
+const unsigned char PROGMEM eyeleft[] = {
+  B00111100,
+  B01000010,
+  B10001101,
+  B10010111,
+  B10011111,
+  B10001101,
+  B01000010,
+  B00111100
+};
+
+const unsigned char PROGMEM eyeblink[] = {
+  B00000000,
+  B00000000,
+  B00000000,
+  B00000000,
+  B10000001,
+  B01000010,
+  B00111100,
+  B00000000
+};
+
+const unsigned char PROGMEM clear[] = {
+  B11111111,
+  B11111111,
+  B11111111,
+  B11111111,
+  B11111111,
+  B11111111,
+  B11111111,
+  B11111111
+};
+
+// #define  t1  2  // Trigger pin on Ultrasonic Sensor 1
+// #define  e1  3  // Echo pin on Ultrasonic Sensor 1
+// #define  t2  4  // Trigger pin on Ultrasonic Sensor 2
+// #define  e2  5  // Echo pin on Ultrasonic Sensor 2
+// #define maxDist 400 // the max distance for the ultrasonic pulse
+
+// NewPing eyeR(trigPin, echoPin, maxDist ); // Initialise Ultrasonic sensor 2
+// NewPing eyeL(t1, e1, maxDist ); // Initialise Ultrasonic sensor 1
+
+
+// We track the current state of the system with this integer variable, this way after a blink, we can out the eyes back to looking at the last direction they were in
+// Possible states are:
+// 0: Looking forward
+// 1: Looking Right
+// 2: Looking Left
+int currentState = -1; 
+
+void setup()
+{
+  // Initialise the Matrix Display library
+
+  matrix.setIntensity(10);
+  pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
+  pinMode(echoPin, INPUT); // Sets the echoPin as an Input
+  pinMode(trigPin2, OUTPUT); // Sets the trigPin as an Output
+  pinMode(echoPin2, INPUT); // Sets the echoPin as an Input
+  Serial.begin(9600); // Starts the serial communication
+
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+  dist1 = righteyeping();
+  delay(100);
+  dist2 = lefteyeping();
+  Serial.println(dist1);
+  Serial.println(dist2);
 
+
+  // delay(250); 
+  // showeyeforward();
+  // delay(250);
+  // matrix.fillScreen(LOW);
+  // showeyeright();
+  // matrix.fillScreen(LOW);
+
+
+  //  We need to work out if the difference between the distances of each ultrasonic sensors detected item is less than 15
+  // or if both distances are 0, meaning nothing was detected. If this condition is met, then make the eyes look forward 
+  float difference = ( dist2 - dist1 );
+  if ( abs( difference ) < 7 || (dist1 == 0 && dist2 == 0 ) )
+  {
+    Serial.println("forward");
+    delay(250);
+    matrix.fillScreen(LOW);
+    showeyeforward();
+    // currentState = 0;
+  }
+  // Now if distance1 is greater than distance2 and distance1 is also greater than 0, then we want to look right  
+  else if ( dist2 < dist1 && dist1 > 0)
+  {
+    Serial.println("right");
+    delay(250);
+    matrix.fillScreen(LOW); 
+    showeyeright();
+    // currentState = 1;
+  }
+  // Now if distance2 is greater than distance1 and distance2 is also greater than 0, then we want to look left  
+  else if ( dist1 < dist2 && dist2 > 0 )
+  {
+    Serial.println("left");
+    delay(250);
+    matrix.fillScreen(LOW);
+    showeyeleft();
+    // currentState = 2;
+  }
+}
+
+
+void showeyeforward()
+{
+  matrix.drawBitmap(0, 0, eyeforward, 8, 8, HIGH);
+  matrix.write();
+}
+
+void showeyeright()
+{
+  matrix.drawBitmap(0, 0, eyeright, 8, 8, HIGH);
+  matrix.write();
+}
+
+void showeyeleft()
+{
+  matrix.drawBitmap(0, 0, eyeleft, 8, 8, HIGH);
+  matrix.write();
+}
+
+void showeyeblink()
+{
+  matrix.drawBitmap(0, 0, eyeblink, 8, 8, HIGH);
+  matrix.write();
+}
+
+void eyeclear()
+{
+  matrix.drawBitmap(0, 0, clear, 8, 8, HIGH);
+  matrix.write();
+}
+
+int righteyeping()
+{
+  digitalWrite(trigPin2, LOW);
+  delayMicroseconds(2);
+  // Sets the trigPin on HIGH state for 10 micro seconds
+  digitalWrite(trigPin2, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin2, LOW);
+  // Reads the echoPin, returns the sound wave travel time in microseconds
+  duration2 = pulseIn(echoPin2, HIGH);
+  // Calculating the distance
+  distance2 = duration2 * 0.034 / 2;
+  // Prints the distance on the Serial Monitor
+  // Serial.print("Distance2 (right): ");
+  // Serial.println(distance2);
+  return distance2;
+}
+
+int lefteyeping()
+{
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  // Sets the trigPin on HIGH state for 10 micro seconds
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  // Reads the echoPin, returns the sound wave travel time in microseconds
+  duration = pulseIn(echoPin, HIGH);
+  // Calculating the distance
+  distance1 = duration * 0.034 / 2;  
+  return distance1;
 }
 
 # Bill of Materials
@@ -99,6 +311,5 @@ One of the best parts about Github is that you can view how other people set up 
 - [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
 - [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
 - [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
--->
 
 To watch the BSE tutorial on how to create a portfolio, click here.
