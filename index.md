@@ -79,14 +79,12 @@ Here's where you'll put your code. The syntax below places it into a block of co
 
 int pinCS = 10;
 
-int numberOfHorizontalDisplays = 1;
-int numberOfVerticalDisplays = 1;
-
+//establishes ultrasonic sensors
 const int trigPin = 2;
 const int echoPin = 3;
 const int trigPin2 = 4;
 const int echoPin2 = 5;
-// defines variables
+//one duration/distance for each sensor
 long duration;
 long duration2;
 int distance1;
@@ -94,11 +92,11 @@ int distance2;
 int dist1;
 int dist2;
 
+int numberOfHorizontalDisplays = 1;
+int numberOfVerticalDisplays = 1;
 Max72xxPanel matrix = Max72xxPanel(pinCS, numberOfHorizontalDisplays, numberOfVerticalDisplays);
 
-// // We are using hardware SPI which automatically 
-// MD_MAX72XX mx = MD_MAX72XX(CS_PIN, MAX_DEVICES); // Initialise the 2 Matrix displays
-
+//eyesprites
 const unsigned char PROGMEM eyeforward[] = {
   B00111100,
   B01000010,
@@ -143,27 +141,6 @@ const unsigned char PROGMEM eyeblink[] = {
   B00000000
 };
 
-const unsigned char PROGMEM clear[] = {
-  B11111111,
-  B11111111,
-  B11111111,
-  B11111111,
-  B11111111,
-  B11111111,
-  B11111111,
-  B11111111
-};
-
-// #define  t1  2  // Trigger pin on Ultrasonic Sensor 1
-// #define  e1  3  // Echo pin on Ultrasonic Sensor 1
-// #define  t2  4  // Trigger pin on Ultrasonic Sensor 2
-// #define  e2  5  // Echo pin on Ultrasonic Sensor 2
-// #define maxDist 400 // the max distance for the ultrasonic pulse
-
-// NewPing eyeR(trigPin, echoPin, maxDist ); // Initialise Ultrasonic sensor 2
-// NewPing eyeL(t1, e1, maxDist ); // Initialise Ultrasonic sensor 1
-
-
 // We track the current state of the system with this integer variable, this way after a blink, we can out the eyes back to looking at the last direction they were in
 // Possible states are:
 // 0: Looking forward
@@ -173,13 +150,12 @@ int currentState = -1;
 
 void setup()
 {
-  // Initialise the Matrix Display library
 
   matrix.setIntensity(10);
-  pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
-  pinMode(echoPin, INPUT); // Sets the echoPin as an Input
-  pinMode(trigPin2, OUTPUT); // Sets the trigPin as an Output
-  pinMode(echoPin2, INPUT); // Sets the echoPin as an Input
+  pinMode(trigPin, OUTPUT); //setup for distance
+  pinMode(echoPin, INPUT); //we strive for biblical accuracy
+  pinMode(trigPin2, OUTPUT);
+  pinMode(echoPin2, INPUT);
   Serial.begin(9600); // Starts the serial communication
 
 }
@@ -232,7 +208,7 @@ void loop()
   }
 }
 
-
+//defining the sprite functions
 void showeyeforward()
 {
   matrix.drawBitmap(0, 0, eyeforward, 8, 8, HIGH);
