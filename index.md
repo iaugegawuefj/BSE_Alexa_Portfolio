@@ -28,11 +28,14 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1-xwfs6DFRc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+My second milestone was to get my base project working, which I just did. Now, when I put my hands in front of each ultrasonic sensor, the eyes look the way they’re supposed to. In order to do this, I had to fix the code from the blueprint given to me. To do this, I ended up integrating the code from my last milestone that allowed me to display the eyes into the original code. I also found an easier way to clear the screen, using a specific built-in command rather than defining my own.
+
+My previous method for clearing the screen (setting a bitmap to be entirely on, defining it as a function and setting the entire thing to LOW) worked in theory. I couldn’t use a bitmap filled entirely with zeroes because the LED bitmaps had an additive effect, resulting in something that looked like an animation with onion skin layers. My method resulted in specific pixels lagging behind the rest, refusing to turn on, and flickering, so it wasn’t ideal. While looking through the example projects from one of the libraries I was using, however, I found a “fillScreen” command that let me clear things by setting every single LED to low. This allowed me to properly animate everything, instead of the previous eye sprite staying on the screen without being overwritten by the next one.
+
+Some previous challenges I overcame were the eyes not displaying properly and my code being  cluttered. With my new libraries, I was able to make the eyes work as well as define all the important parts of my code as functions so I could call them more easily.
+
+Before I complete my final milestone, I will need to figure out how I’m going to mount the whole thing onto the chassis. Right now, the box is relatively thin, so I might need to 3d-print a wider box so it doesn’t fall over or become unstable while it’s moving. I’ll also need to solder everything onto a protoboard so it’s more compact and easier to fit inside the box, then fit the ultrasonic sensors and LED matrices into their places securely. Right now, everything’s held together with painter’s tape, which is functional but incredibly irritating to work with.
+![video of the eyes moving](eyes.mov){:height="30%" width="30%"}
 
 # First Milestone
 
