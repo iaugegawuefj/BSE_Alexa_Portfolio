@@ -2,7 +2,7 @@
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Alexa Z | Crystal Springs Uplands School | Mechanical Engineering | Incoming Junior
+| Alexa Z | Crystal Springs Uplands School | Mechanical Engineering | Incoming Sophomore
 
 
 ![headshot](alexa_headshot.png){:height="50%" width="50%"}
