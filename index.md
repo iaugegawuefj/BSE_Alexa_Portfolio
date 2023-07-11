@@ -1,7 +1,4 @@
 # Ultrasonic Eyes
-```HTML ->
-welcome to funnyland
-```
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
