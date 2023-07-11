@@ -33,6 +33,7 @@ Some previous challenges I overcame were the eyes not displaying properly and my
 
 Before I complete my final milestone, I will need to figure out how I’m going to mount the whole thing onto the chassis. Right now, the box is relatively thin, so I might need to 3d-print a wider box so it doesn’t fall over or become unstable while it’s moving. I’ll also need to solder everything onto a protoboard so it’s more compact and easier to fit inside the box, then fit the ultrasonic sensors and LED matrices into their places securely. Right now, everything’s held together with painter’s tape, which is functional but incredibly irritating to work with.
 
+
 ![eyes](eyes1.png){:height="30%" width="30%"}
 ![eyes](eyes2.png){:height="30%" width="30%"}
 ![eyes](eyes3.png){:height="30%" width="30%"}
