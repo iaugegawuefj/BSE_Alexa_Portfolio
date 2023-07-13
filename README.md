@@ -1,1 +1,1 @@
-This project is a battery-powered cat lamp that turns on automatically when it's dark.
+My project is a box on wheels with eyes that track movement. The box rotates with the movement in an effort to keep the moving object in front of it.
