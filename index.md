@@ -287,8 +287,7 @@ int lefteyeping()
 | 1.5 Volt AA Batteries (4x) | To power components | $7.24 (4pcs) | <a href="https://www.amazon.com/AmazonBasics-Volt-Performance-Alkaline-Batteries/dp/B081FGSWTJ/ref=asc_df_B081FGSWTJ/"> here ;D </a> |
 | H Bridge Motor Driver | To control motors | $6.99 | <a href="https://www.amazon.com/Qunqi-Controller-Module-Stepper-Arduino/dp/B014KMHSW6/"> here B) </a> |
 | Robot Car Chassis Kit | To move the robot around | $7.24 (4pcs) | <a href="https://www.amazon.com/Smart-Chassis-Motors-Encoder-Battery/dp/B01LXY7CM3/"> here !! </a> |
-
-you'll need to 3d-print [the case for the robot]([url](https://www.markdownguide.org/extended-syntax/)). or you could just make your own
+| 3d-Printed Case | To house the components | do you have a 3d printer?? | <a href="https://www.hackster.io/unexpectedmaker/ultrasoniceyes-b9fd38#cad"> here !! </a> |
 
 
 # Other Resources/Examples
