@@ -6,9 +6,10 @@
 
 
 ![headshot](alexa_headshot.png){:height="50%" width="50%"}
-  
+![headshot](Alexa-Project.png){:height="50%" width="50%"}
+
 # Final Milestone
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9ku1rtY9wRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Summary
 For my third milestone, i wanted to mount my project onto wheels so it would be able to rotate in the direction of wherever the eyes were looking. To do this, I slapped my entire project onto a chassis and attached wheels and motors to it. It's mobile! And fairly autonomous.
@@ -43,6 +44,7 @@ I basically completed my base project - everything works.
 
 ## Next steps
 Before I complete my final milestone, I will need to figure out how I’m going to mount the whole thing onto the chassis. Right now, the box is relatively thin, so I might need to 3d-print a wider box so it doesn’t fall over or become unstable while it’s moving. I’ll also need to solder everything onto a protoboard so it’s more compact and easier to fit inside the box, then fit the ultrasonic sensors and LED matrices into their places securely. Right now, everything’s held together with painter’s tape, which is functional but incredibly irritating to work with.
+
 ![eyes](eyes1.png){:height="30%" width="30%"}
 ![eyes](eyes2.png){:height="30%" width="30%"}
 ![eyes](eyes3.png){:height="30%" width="30%"}
