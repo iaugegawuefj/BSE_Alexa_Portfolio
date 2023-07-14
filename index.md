@@ -274,7 +274,6 @@ int lefteyeping()
 }
 ```
 # Bill of Materials
-(you'll need to 3d-print the robot's case or just build one yourself)
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
 | Ultrasonic Sensor (2x) | To measure distance | $4.50 each | <a href="https://www.sparkfun.com/products/15569"> here :) </a> |
