@@ -30,6 +30,10 @@ In the future, I hope to use the skills I gained here to make things more conven
 # Second Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1-xwfs6DFRc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+![eyes](eyes1.png){:height="30%" width="30%"}
+![eyes](eyes2.png){:height="27%" width="27%"}
+![eyes](eyes3.png){:height="30%" width="30%"}
+
 ## Summary
 My second milestone was to get my base project working, which I just did. Now, when I put my hands in front of each ultrasonic sensor, the eyes look the way they’re supposed to. In order to do this, I had to fix the code from the blueprint given to me. To do this, I ended up integrating the code from my last milestone that allowed me to display the eyes into the original code. I also found an easier way to clear the screen, using a specific built-in command rather than defining my own.
 
@@ -44,10 +48,6 @@ I basically completed my base project - everything works.
 
 ## Next steps
 Before I complete my final milestone, I will need to figure out how I’m going to mount the whole thing onto the chassis. Right now, the box is relatively thin, so I might need to 3d-print a wider box so it doesn’t fall over or become unstable while it’s moving. I’ll also need to solder everything onto a protoboard so it’s more compact and easier to fit inside the box, then fit the ultrasonic sensors and LED matrices into their places securely. Right now, everything’s held together with painter’s tape, which is functional but incredibly irritating to work with.
-
-![eyes](eyes1.png){:height="30%" width="30%"}
-![eyes](eyes2.png){:height="25%" width="25%"}
-![eyes](eyes3.png){:height="30%" width="30%"}
 
 # First Milestone
 
@@ -76,6 +76,9 @@ To complete the project, I need to have the eyes react to movement (basically ge
 # Starter Project
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rF_A1ypClEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+![Headstone Image](cat1.png){:height="30%" width="30%"}
+![Headstone Image](cat2.png){:height="30%" width="30%"}
+
 ## Summary
 This lamp, stylized like a cat, is the exact opposite of the pinnacle of engineering. Sporting a grand total of 7 components (a photoresistor, 100k resistor, transistor, battery, battery holder, LED, and on/off switch), 24 solder joints, and one function, this project demonstrates nothing but my absolute inexperience with engineering. My biggest takeaway from this was my absolute ineptitude. Other than that, I figured out how to solder properly, so it wasn't a total waste.
 
@@ -89,9 +92,6 @@ This lamp, stylized like a cat, is the exact opposite of the pinnacle of enginee
   
 ## Challenges Faced
   The main challenge I had with this project was my inexperience with soldering. I kept on forgetting to heat the metal itself, not just the solder, which made the solder not stick to the surfaces it needed to and prevented the flow of electricity throughout the project. In order to remedy this problem, I now pay close attention to how hot the materials I work with are when I solder.
-
-![Headstone Image](cat1.png){:height="30%" width="30%"}
-![Headstone Image](cat2.png){:height="30%" width="30%"}
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
