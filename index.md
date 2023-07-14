@@ -46,7 +46,7 @@ I basically completed my base project - everything works.
 Before I complete my final milestone, I will need to figure out how I’m going to mount the whole thing onto the chassis. Right now, the box is relatively thin, so I might need to 3d-print a wider box so it doesn’t fall over or become unstable while it’s moving. I’ll also need to solder everything onto a protoboard so it’s more compact and easier to fit inside the box, then fit the ultrasonic sensors and LED matrices into their places securely. Right now, everything’s held together with painter’s tape, which is functional but incredibly irritating to work with.
 
 ![eyes](eyes1.png){:height="30%" width="30%"}
-![eyes](eyes2.png){:height="30%" width="30%"}
+![eyes](eyes2.png){:height="25%" width="25%"}
 ![eyes](eyes3.png){:height="30%" width="30%"}
 
 # First Milestone
@@ -60,6 +60,7 @@ My project is the Ultrasonic Eyes, which track movement based on ultrasonic sens
 - LED matrices: a form of dot-matrix display, with their cathodes joined in rows and anodes in columns. By sending signals to a specific row and column, you can light up individual LEDS.
 - ultrasonic sensors: use ultrasonic waves to calculate distance based on how long it takes for the waves to bounce back (like sonar)
 - arduino nano: microcontroller to read code (input) and turn it into an output (turning things on)
+
 Here, I used the LED matrices to light up the pattern for the eyes. Later, by using different “sprites”, I hope that it’ll give the illusion of looking where movement is. The ultrasonic sensors are used to figure out what’s moving - if one of the ultrasonic sensors has a distance value that is more than 0 (and greater than the other’s value), then something’s moving more in front of that sensor and the eyes should look in that direction. Later, I'll use these two together to make the LEDS display eyes that react to the ultrasonic sensor's output The Arduino Nano controls everything with the code I upload to it from my computer, and provides power to the LED matrices so they can turn on. There’s really nothing else about it.
 
 ## Progress
@@ -83,6 +84,7 @@ This lamp, stylized like a cat, is the exact opposite of the pinnacle of enginee
 - transistor: acts as a switch or gate for electronic signals
 - resistor: controls the current coming from the battery
 - battery: provides electric current to the project
+
   Generally, the electricity from the battery goes through the resistor. From there, it can either go through the transistor or photoresistor. When it’s bright, the current prefers going through the photoresistor due to its weak resistance. This means that the amount of current going through the photoresistor increases, and not enough electricity gets to the transistor to turn it on. When it’s dark, the photoresistor’s resistance is maximized. Because of this, the current going through the photoresistor decreases, and therefore the current going to the transistor increases. Enough electricity flows through the transistor’s collector and base legs to turn on the LED.
   
 ## Challenges Faced
