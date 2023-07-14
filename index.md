@@ -279,9 +279,17 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Ultrasonic Sensor (2x) | To measure distance | $4.50 each | <a href="https://www.sparkfun.com/products/15569"> here :) </a> |
+| Arduino Nano | To process code | $23.23 | <a href="https://www.newark.com/arduino/a000005/dev-board-atmega328-arduino-nano/dp/13T9275?"> here! </a> |
+| LED Matrix (2x) | To display eyes | $2.00 each | <a href="https://www.amazon.com/MAX7219-Matrix-Display-Module-Control/dp/B09STT6QDV"> here :D </a> |
+| Breadboard (half size) | To hold components | $5.05 | <a href="https://www.newark.com/adafruit/64/bread-board-prototype-electronics/dp/53W6131?"> here :] </a> |
+| Male-Male Jumper Wires | To connect components | $4.03 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> here </a> |
+| Female-Male Jumper Wires | To connect components | $4.03 | <a href="https://www.newark.com/adafruit/826/wire-gauge-28awg/dp/88W2802?"> here </a> |
+| Female-Female Jumper Wires | To connect components | $2.99 | <a href="https://www.gobilda.com/female-to-female-jumper-wire-multicolor-10cm-length-40-pack/?gclid=CjwKCAjw5MOlBhBTEiwAAJ8e1ltGwNC-D4mh9wg9YiMIbO6rGFY9HcIgsYPzXv81HINFnjm0SOmvohoCs_IQAvD_BwE"> here </a> |
+| 9 Volt Battery | To power components | $10.14 (4pcs) | <a href="https://www.amazon.com/Amazon-Basics-Performance-All-Purpose-Batteries/dp/B0774D64LT?th=1"> here :') </a> |
+| 1.5 Volt AA Batteries (4x) | To power components | $7.24 (4pcs) | <a href="https://www.amazon.com/AmazonBasics-Volt-Performance-Alkaline-Batteries/dp/B081FGSWTJ/ref=asc_df_B081FGSWTJ/"> here ;D </a> |
+| H Bridge Motor Driver | To control motors | $6.99 | <a href="https://www.amazon.com/Qunqi-Controller-Module-Stepper-Arduino/dp/B014KMHSW6/"> here B) </a> |
+| Robot Car Chassis Kit | To move the robot around | $7.24 (4pcs) | <a href="https://www.amazon.com/Smart-Chassis-Motors-Encoder-Battery/dp/B01LXY7CM3/"> here !! </a> |
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
