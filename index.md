@@ -5,8 +5,8 @@
 | Alexa Z | Crystal Springs Uplands School | Mechanical Engineering | Incoming Sophomore
 
 
-![headshot](alexa_headshot.png){:height="50%" width="50%"}
-![headshot](Alexa-Project.png){:height="50%" width="50%"}
+![headshot](alexa_headshot.png){:height="30%" width="30%"}
+![headshot](Alexa-Project.png){:height="30%" width="30%"}
 
 # Final Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9ku1rtY9wRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -90,9 +90,6 @@ This lamp, stylized like a cat, is the exact opposite of the pinnacle of enginee
 
 ![Headstone Image](cat1.png){:height="30%" width="30%"}
 ![Headstone Image](cat2.png){:height="30%" width="30%"}
-
-# Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
@@ -298,6 +295,7 @@ int lefteyeping()
 }
 ```
 # Bill of Materials
+
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
 | Ultrasonic Sensor (2x) | To measure distance | $4.50 each | <a href="https://www.sparkfun.com/products/15569"> here :) </a> |
