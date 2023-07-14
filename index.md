@@ -274,9 +274,6 @@ int lefteyeping()
 }
 ```
 # Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
-
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
 | Ultrasonic Sensor (2x) | To measure distance | $4.50 each | <a href="https://www.sparkfun.com/products/15569"> here :) </a> |
@@ -290,6 +287,9 @@ Don't forget to place the link of where to buy each component inside the quotati
 | 1.5 Volt AA Batteries (4x) | To power components | $7.24 (4pcs) | <a href="https://www.amazon.com/AmazonBasics-Volt-Performance-Alkaline-Batteries/dp/B081FGSWTJ/ref=asc_df_B081FGSWTJ/"> here ;D </a> |
 | H Bridge Motor Driver | To control motors | $6.99 | <a href="https://www.amazon.com/Qunqi-Controller-Module-Stepper-Arduino/dp/B014KMHSW6/"> here B) </a> |
 | Robot Car Chassis Kit | To move the robot around | $7.24 (4pcs) | <a href="https://www.amazon.com/Smart-Chassis-Motors-Encoder-Battery/dp/B01LXY7CM3/"> here !! </a> |
+
+you'll need to 3d-print [the case for the robot]([url](https://www.markdownguide.org/extended-syntax/)). or you could just make your own
+
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
